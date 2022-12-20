@@ -1,12 +1,18 @@
-import java.util.Arraylist;
-
+import java.util.ArrayList;
+/**
+ * @author Ryan Sevidal
+ * @version December 20, 2022
+ * <p>
+ * Description
+ * <p>
+ */
 public class List {
-    private Arraylist<Task> taskList;
+    private ArrayList<Task> taskList;
     private String listName;
 
     public List(String listName) {
         this.listName = listName;
-        taskList = new Arraylist<>;
+        taskList = new ArrayList<>();
     }
 
     public String getListName() {

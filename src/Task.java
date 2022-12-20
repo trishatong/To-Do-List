@@ -1,8 +1,15 @@
+/**
+ * @author Trisha Tong
+ * @version December 20, 2022
+ * <p>
+ * Description
+ * <p>
+ */
 public class Task {
     // name, date and time, description
     String name;
     int date;
-    int time; 
+    int time;
     String description;
 
     // name getter

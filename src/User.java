@@ -1,3 +1,11 @@
+/**
+ * @author Ryan Sevidal
+ * @version December 20, 2022
+ * <p>
+ * Description
+ * <p>
+ */
+
 public class User {
     private String username;
     private String password;
