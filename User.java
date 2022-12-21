@@ -1,3 +1,6 @@
+import java.io.*;
+import java.util.ArrayList;
+
 /**
  * @author Ryan Sevidal
  * @version December 20, 2022
@@ -6,13 +9,15 @@
  * <p>
  */
 
-public class User {
+public class User implements Serializable {
     private String username;
     private String password;
+    private ArrayList<List> lists;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        lists = new ArrayList<>();
     }
 
     public void setUsername(String username) {
