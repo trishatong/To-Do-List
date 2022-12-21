@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * @author Trisha Tong
  * @version December 20, 2022
@@ -5,21 +7,12 @@
  * Description
  * <p>
  */
-public class Task {
-    String authorName;
-    String name;
-    String date;
-    String description;
+public class Task implements Serializable {
+    private String name;
+    private String date;
+    private String description;
 
     // getters and setters
-    public String getAuthorName() {
-        return authorName;
-    }
-
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
-    }
-
     public String getName() {
         return name;
     }
@@ -43,4 +36,5 @@ public class Task {
     public void setDescription(String newDescription) {
         this.description = newDescription;
     }
+
 }

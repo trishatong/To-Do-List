@@ -17,7 +17,13 @@ public class Server {
             String username = br.readLine();
             String password = br.readLine();
 
-            
+            FileWriter fw = new FileWriter("userData.txt");
+            PrintWriter pw2 = new PrintWriter(fw);
+            pw2.printf("%s\\%s", username, password);
+
+            br.close();
+            pw.close();
+            pw2.close();
 
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Connection was not established.",
