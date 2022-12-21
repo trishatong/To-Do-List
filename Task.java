@@ -6,11 +6,20 @@
  * <p>
  */
 public class Task {
+    String authorName;
     String name;
     String date;
     String description;
 
     // getters and setters
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
     public String getName() {
         return name;
     }
@@ -23,8 +32,8 @@ public class Task {
         return date;
     }
 
-    public void setDate(String newDate) {
-        this.date = newDate;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getDescription() {

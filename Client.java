@@ -145,9 +145,9 @@ public class Client {
                         "To-Do List Client", JOptionPane.INFORMATION_MESSAGE);
             br.close();
             pw.close();
+
         }
-        
-        
+
         catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Connection was not established.",
                     "To-Do List Client", JOptionPane.ERROR_MESSAGE);
