@@ -10,7 +10,6 @@ import javax.swing.*;
  * <p>
  */
 public class Client {
-<<<<<<< Updated upstream
     public static void main(String[] args) {
         String hostName;
         String portNumber = "";
@@ -38,7 +37,7 @@ public class Client {
 
         
 
-        /* try {
+        try {
             Socket socket = new Socket(hostName, Integer.parseInt(portNumber));
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter pw = new PrintWriter(socket.getOutputStream());
@@ -126,8 +125,9 @@ public class Client {
                         "To-Do List Client", JOptionPane.INFORMATION_MESSAGE);
             br.close();
             pw.close();
+
         }
-        */
+
         
         catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Connection was not established.",
@@ -135,7 +135,4 @@ public class Client {
             return;
         }
     }
-=======
-
->>>>>>> Stashed changes
 }

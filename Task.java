@@ -1,5 +1,3 @@
-import java.io.Serializable;
-import java.text.SimpleDateFormat;
 /**
  * @author Trisha Tong
  * @version December 20, 2022
@@ -7,16 +5,13 @@ import java.text.SimpleDateFormat;
  * Description
  * <p>
  */
-public class Task implements Serializable {
+public class Task {
     String authorName;
     String name;
     String date;
     String description;
-    String textBody;
 
     // getters and setters
-
-
     public String getAuthorName() {
         return authorName;
     }
@@ -37,13 +32,8 @@ public class Task implements Serializable {
         return date;
     }
 
-<<<<<<< Updated upstream
-    public void setDate(String newDate) {
-        this.date = newDate;
-=======
     public void setDate(String date) {
         this.date = date;
->>>>>>> Stashed changes
     }
 
     public String getDescription() {
@@ -53,5 +43,4 @@ public class Task implements Serializable {
     public void setDescription(String newDescription) {
         this.description = newDescription;
     }
-    
 }

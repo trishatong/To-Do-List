@@ -17,6 +17,7 @@ public class Server {
             String username = br.readLine();
             String password = br.readLine();
 
+            
 
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Connection was not established.",

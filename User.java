@@ -8,7 +8,7 @@ import java.io.*;
  * <p>
  */
 
-public class User implements Serializable {
+public class User {
     private String username;
     private String password;
     String listName;
