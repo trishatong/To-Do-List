@@ -10,6 +10,7 @@ import javax.swing.*;
  * <p>
  */
 public class Client {
+<<<<<<< Updated upstream
     public static void main(String[] args) {
         String hostName;
         String portNumber = "";
@@ -134,4 +135,7 @@ public class Client {
             return;
         }
     }
+=======
+
+>>>>>>> Stashed changes
 }

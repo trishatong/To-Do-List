@@ -1,30 +1,26 @@
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 
 public class Server {
-    private static final int PORT_NUM = 2025;
-    private static UserData userData;
     public Server() {
     }
 
-    public static void main(String[] var0) {
-        Socket var1 = null;
-        ServerSocket var2 = null;
-
+    public static void main(String[] args) {
         try {
-            var2 = new ServerSocket(PORT_NUM);
+            ServerSocket serverSocket = new ServerSocket(2025);
+            Socket socket = serverSocket.accept();
+            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter pw = new PrintWriter(socket.getOutputStream());
+
+            String username = br.readLine();
+            String password = br.readLine();
+
+
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Server error");
+            JOptionPane.showMessageDialog(null, "Connection was not established.",
+                    "Statistics Server", JOptionPane.ERROR_MESSAGE);
         }
-    }
-
-    static {
-        FileIO.setFileName("discussionBoard.ser");
-        userData = FileIO.readUserData();
-        if (userData == null) {
-            userData = new UserData();
-        }
-
     }
 }
