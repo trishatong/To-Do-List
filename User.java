@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.ArrayList;
-
 /**
  * @author Ryan Sevidal
  * @version December 20, 2022
@@ -9,15 +6,15 @@ import java.util.ArrayList;
  * <p>
  */
 
-public class User implements Serializable {
+public class User {
     private String username;
     private String password;
-    private ArrayList<List> lists;
+    String listName;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        lists = new ArrayList<>();
+        String listName;
     }
 
     public void setUsername(String username) {
@@ -34,5 +31,9 @@ public class User implements Serializable {
 
     public String getPassword() {
         return password;
+    }
+
+    public void createList() {
+        List list = new List(listName);
     }
 }
