@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 import javax.swing.*;
+
 /**
  * @author Trisha Tong
  * @version December 21, 2022
@@ -35,14 +36,33 @@ public class Client {
             return;
         }
 
+        // buttons to create task or quit
+        String[] options = {"Create Task", "Quit"};
+        int popup = JOptionPane.showOptionDialog(null, "Question ?", "Confirmation",
+        JOptionPane.WARNING_MESSAGE, 0, null, options, options[2]);
+        System.out.println(popup);
         
+// username passowrd x2
 
-        /* try {
+        try {
             Socket socket = new Socket(hostName, Integer.parseInt(portNumber));
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter pw = new PrintWriter(socket.getOutputStream());
             do {
-                    text = JOptionPane.showInputDialog(null, "What is your string?",
+                    text = JOptionPane.showInputDialog(null, "What is your username?",
+                            "To-Do List Client", JOptionPane.QUESTION_MESSAGE);
+                    if (text == null)
+                        return;
+
+                    else if (text.isBlank()) {
+                        JOptionPane.showMessageDialog(null,
+                                "String cannot be empty! Please re-enter", "To-Do List Client",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+                } while (text.isBlank());
+
+            do {
+                    text = JOptionPane.showInputDialog(null, "What is your password?",
                             "To-Do List Client", JOptionPane.QUESTION_MESSAGE);
                     if (text == null)
                         return;
@@ -126,12 +146,13 @@ public class Client {
             br.close();
             pw.close();
         }
-        */
+        
         
         catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Connection was not established.",
                     "To-Do List Client", JOptionPane.ERROR_MESSAGE);
             return;
         }
+        
     }
 }
