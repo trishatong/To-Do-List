@@ -7,8 +7,7 @@
  */
 public class Task {
     String name;
-    int date;
-    int time;
+    String date;
     String description;
 
     // getters and setters
@@ -20,20 +19,12 @@ public class Task {
         this.name = newName;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int newDate) {
+    public void setDate(String newDate) {
         this.date = newDate;
-    }
-
-    public int getTime() {
-        return time;
-    }
-
-    public void setTime(int newTime) {
-        this.time = newTime;
     }
 
     public String getDescription() {
