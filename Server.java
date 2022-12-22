@@ -17,15 +17,29 @@ public class Server {
             String username = br.readLine();
             String password = br.readLine();
 
-            FileWriter fw = new FileWriter("userData.txt");
-            PrintWriter pw2 = new PrintWriter(fw);
-            pw2.printf("%s\\%s", username, password);
+            User user = new User(username, password);
+            String fileName = "userData.ser";
+            if (!UserData.users.contains(user)) {
+                UserData.addUser(user);
+                try {
+                    FileOutputStream file = new FileOutputStream(fileName);
+                    ObjectOutputStream out = new ObjectOutputStream(file);
 
+                    out.writeObject(user);
+
+                    out.close();
+                    file.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             br.close();
             pw.close();
-            pw2.close();
+
 
         } catch (IOException e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Connection was not established.",
                     "Statistics Server", JOptionPane.ERROR_MESSAGE);
         }
